@@ -1,6 +1,6 @@
 ## Anatomy of a Rust Program 
 
-The Rust 'Hello, World!' is composed of two main piece : 
+The Rust 'Hello, World!' is composed of two main pieces : 
 
 ```rs
 fn main() {
