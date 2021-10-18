@@ -1,4 +1,5 @@
 use std::io::{self};
+use rand::Rng;
 fn main() {
     println!("Guess the number!");
 
