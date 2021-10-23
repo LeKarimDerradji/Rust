@@ -1,6 +1,7 @@
 // Importing libraries with particular traits
 use std::io::{self};
 use rand::Rng;
+use std::cmp::Ordering;
 fn main() {
     println!("Guess the number!");
     // Consuming the rand library by declaring a variable that is set to a random number between 1 & 0 
@@ -11,11 +12,17 @@ fn main() {
 
     println!("Please input your guess: ");
 
-    let mut guess= String::new();
+    let mut guess = String::new();
 
     io::stdin()
         .read_line(&mut guess)
         .expect("Failed to read line");
 
     println!("You guessed {}", guess);
+
+    match guess.cmp(&secret_number) {
+        Ordering::Less => println!("Too Small!"),
+        Ordering::Greater => println!("Too Big!"),
+        Ordering::Equal => println!("You Guessed The Secret Number!"),
+    }
 }
