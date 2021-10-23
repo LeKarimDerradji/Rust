@@ -8,7 +8,6 @@ fn main() {
     // The random number is within the thread of the OS. Gen_Range is to control the range.
     let secret_number = rand::thread_rng().gen_range(1..111);
     // Printing that number to test that rand works.
-    println!("The secret number is {}", secret_number);
 
     loop {
         println!("Please input your guess: ");
